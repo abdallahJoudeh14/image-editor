@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image-Editor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="container disabled">
+        <h1>Image Editor</h1>
+        <div class="wrapper">
+            <div class="editingTools">
+                <div class="filters">
+                    <h4>filters</h4>
+                    <button class="brightness active" disabled>brightness</button>
+                    <button class="saturation" disabled>saturation</button>
+                    <button class="inversion" disabled>inversion</button>
+                    <button class="grayscale" disabled>grayscale</button>
+                </div>
+                <div class="range">
+                    <p class="filterInfo"><span class="title">brightness</span><span class="valueRange">100%</span></p>
+                    <input type="range" name="range" id="range"  min="0" max="200" disabled>
+                </div>
+                <div class="rotateFlip">
+                    <h4>rotate & flip</h4>
+                    <div class="rotateFlipBtns">
+                        <button class="rotateLeft" disabled><i class="fa-solid fa-rotate-left"></i></button>
+                        <button class="rotateRight"disabled><i class="fa-solid fa-rotate-right"></i></button>
+                        <button class="flipLeft" disabled><i class='bx bx-reflect-vertical'></i></i></button>
+                        <button class="flipRight" disabled><i class='bx bx-reflect-horizontal'></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="img"></div>
+        </div>
+        <div class="resetSave">
+            <button class="resetFilters" disabled>reset filters</button>
+            <div class="chsSave">
+                <input  type="file" accept="image/*" style="display: none; position: absolute; top: 0; left: 0; z-index: -999;">
+                <button class="chooseImg">choose image</button>
+                <button class="saveImg" disabled>save image</button>
+
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
