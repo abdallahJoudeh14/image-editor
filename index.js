@@ -84,10 +84,10 @@ const updateSlider = function () {
 
 function rotateAndFlip(btn) {
     if (btn.className === "rotateLeft") {
-        rotate += 90
+        rotate -= 90
     }
     else if (btn.className === "rotateRight") {
-        rotate -= 90
+        rotate += 90
     }
     else if (btn.className === "flipLeft") {
         flipX = flipX === 1 ? -1 : 1;
@@ -144,8 +144,7 @@ function saveImage() {
     ctx.translate(canvas.width / 2, canvas.height / 2)
     if (rotate !== 0) {
         ctx.rotate(rotate * Math.PI / 180);
-        console.log(rotate)
-        console.log(rotate * Math.PI / 180)
+        
     }
     ctx.scale(flipX, flipY)
     ctx.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}) grayscale(${grayscale})`;
